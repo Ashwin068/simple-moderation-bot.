@@ -7,10 +7,10 @@ exports.run = async (client, message, args) => {
       .setDescription("Fuck :middle_finger: You Do Not Have permission To Use This cmd! :stuck_out_tongue_winking_eye:");
 return message.channel.send(embed);
   }
-  if (!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.channel.send(`**${message.author.tag}** Maaf, Rendang Tidak Mempunyai Permissions \`BAN_MEMBERS\` Tolong Beri Rendang Permissions Untuk Ban Member :)`).then(msg=>msg.delete(5000))
+  if (!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.channel.send(`> **${message.author.tag}** That user is a mod/admin,I can°t do that`).then(msg=>msg.delete(5000))
   
   let toBan = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-  if(!toBan) return message.channel.sendMessage("Tidak Dapat Menemukan User! Mention User Terlebih Dahulu!");
+  if(!toBan) return message.channel.sendMessage("> **__SORRY__ Wrong cmd use😉 plz use `$ban` `mentionuser` `reason`");
   let reason = args.join(" ").slice(22);
   if (toBan.hasPermission("BAN_MEMBERS")) return message.channel.send("User Ini Tidak Dapat Diban :(").then(msg => msg.delete(5000));
   
@@ -18,14 +18,14 @@ return message.channel.send(embed);
    message.guild.member(toBan).ban(reason);
    try {
     if (!reason) {
-      toBan.send(`**${toBan.user.tag}** Kamu Telah Di Ban Dari **${message.guild.name}**`)
+      toBan.send(`**${toBan.user.tag}** You were banned from **${message.guild.name}**`)
     } else {
-      toBan.send(`**${toBan.user.tag}** Kamu Telah Di Ban Dari **${message.guild.name}**
-Alasan: "${reason}"`);
+      toBan.send(`**${toBan.user.tag}** You were banned from **${message.guild.name}**
+Reason: "${reason}"`);
     }
     let embedB = new RichEmbed()
     .setColor('RANDOM')
-    .setTitle('User Telah Diban Dari Server')
+    .setTitle('USER IS BANNED')
     .addField('username', toBan.user.username, true)
     .addField('ID', toBan.id, true)
     message.channel.send(embedB);
