@@ -10,9 +10,9 @@ return message.channel.send(embed);
   if (!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.channel.send(`> **${message.author.tag}** That user is a mod/admin,I can°t do that`).then(msg=>msg.delete(5000))
   
   let toBan = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-  if(!toBan) return message.channel.sendMessage("> **__SORRY__ Wrong cmd use😉 plz use `$ban` `mentionuser` `reason`");
+  if(!toBan) return message.channel.sendMessage("> **__SORRY__** Wrong cmd use😉 plz use `$ban` `mentionuser` `reason`");
   let reason = args.join(" ").slice(22);
-  if (toBan.hasPermission("BAN_MEMBERS")) return message.channel.send("User Ini Tidak Dapat Diban :(").then(msg => msg.delete(5000));
+  if (toBan.hasPermission("BAN_MEMBERS")) return message.channel.send("I can°t ban this user").then(msg => msg.delete(5000));
   
   if (toBan.highestRole.position < message.guild.member(client.user).highestRole.position) {
    message.guild.member(toBan).ban(reason);
@@ -33,7 +33,7 @@ Reason: "${reason}"`);
     console.log(e.message)
   }
   } else {
-   message.channel.send(`Saya Tidak Bisa Ban **${toBan.user.tag}** Karena Role Dia Lebih Tinngi Dari Saya.`)
+   message.channel.send(`i can't ban **${toBan.user.tag}**`)
   }
 }
  
