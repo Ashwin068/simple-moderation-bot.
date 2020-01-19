@@ -8,7 +8,7 @@ function statsBuilder (client, msg, args){
 		.setThumbnail(client.user.displayAvatarURL)
 		.setTitle('My statistic')
 		.setDescription(`\`\`\`asciidoc
-Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
+Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} 
 Uptime     :: ${uptime}
 WS Ping    :: ${client.ping.toFixed(2)}ms
 Users      :: ${client.users.size.toLocaleString()}
@@ -16,8 +16,7 @@ Servers    :: ${client.guilds.size.toLocaleString()}
 Channels   :: ${client.channels.size.toLocaleString()}
 Discord.js :: v${version}
 Node       :: ${process.version}\`\`\``)
-		.addField('📌 About me', 'Rendang is a **spicy** meat dish which originated from **Indonesia**, especially the ethnic group of **Minangkabau** people, and is now commonly served across the country.')
-		.addField('\u200B', `[Github Repository](https://github.com/CodDevelopment/Rendang) | [CI Status](https://travis-ci.org/CodDevelopment/Rendang)`);
+		.addField('\u200B', `[Join Our official server](https://discord.gg/hu4myN9)`);
 		return msg.channel.send(embed);
 	} catch (err) {
 		return msg.channel.send(err.stack, { code: 'ini' });
