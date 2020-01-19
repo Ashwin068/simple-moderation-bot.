@@ -4,8 +4,8 @@ exports.run = async (client, message, args) => {
 
 let embed = new SharifEmbed()
       .setColor("RANDOM")
-      .setTitle("Ingin Menginvite Rendang Ke Server Mu?")
-      .setDescription("[Klik Disini](https://discordapp.com/oauth2/authorize?client_id=485054998632464384&scope=bot&permissions=112327680)")
+      .setTitle("our invite link below")
+      .setDescription("[Click here and invite me](https://discordapp.com/oauth2/authorize?client_id=660215080687894560&scope=bot&permissions=8)")
       .setFooter(`Requested By : ${message.author.username}`);
       
      message.channel.send(embed);
