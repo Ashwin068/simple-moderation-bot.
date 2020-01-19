@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
     message.channel.fetchMessages({ limit: Math.min(count, 100) })
     .then(messages => {
         message.channel.bulkDelete(messages);
-        message.channel.send(`Sukses meghapus pesan. Total pesan terhapus ${count}`).then(msg=>msg.delete(5000));
+        message.channel.send(`Messages deleted  ${count}`).then(msg=>msg.delete(5000));
     }).catch(err => {
         console.log(err);
     });
