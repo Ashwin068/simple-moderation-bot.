@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
 let embed = new SharifEmbed()
       .setColor("RANDOM")
       .setTitle("our invite link below")
-      .setDescription("[Click here and invite me](https://discordapp.com/oauth2/authorize?client_id=660215080687894560&scope=bot&permissions=8)")
+      .setDescription("[Click here and invite me](https://discordapp.com/oauth2/authorize?client_id=657900037678039040&scope=bot&permissions=8)")
       .setFooter(`Requested By : ${message.author.username}`);
       
      message.channel.send(embed);
