@@ -3,7 +3,7 @@ module.exports = client => {
   function randStatus() {
     let status = [`with ${client.users.size} users`, `with Daynite World`];
     let rstatus = Math.floor(Math.random() * status.length);
-    client.user.setActivity(status[rstatus], { type: 'WATCHING' });
+    client.user.setActivity(status[rstatus], { type: 'PLAYING' });
   };
 setInterval(randStatus, 60000);
   console.log(`${client.user.username} Bots online!`);
@@ -11,7 +11,7 @@ setInterval(randStatus, 60000);
   /*hourly cat present :v - youKnowOwO*/ /*ok then - Hazmi35*/
   client.setInterval(() => {
   	for(const guild of client.guilds.array()){
-	  	const channel = guild.channels.filter(x => x.name === 'bot-spam').first();
+	  	const channel = guild.channels.filter(x => x.name === '๖ۣ•҉-╽ʙoт-sᴘᴀм').first();
 	  	if(!channel) continue;
 		client.commands.get('cat').getCat(channel, 'Hourly Cat present');
   	}
