@@ -3,7 +3,7 @@ exports.run = async (client, message, args, color) => { // eslint-disable-line n
 	var time = args[0];
 	var reminder = args.splice(1).join(' ');
 
-	if (!time) return message.reply('Tidak dapat mengingatkan Anda jika saya tidak tahu kapan harus melakukannya...');
+	if (!time) return message.reply('Can not remind you if I do not know when to do it...');
 	if (!reminder) return message.reply('Anda lupa pengingat/pesannya');
 
 	// Ini tidak akan berfungsi jika bot di-restart atau dihentikan
