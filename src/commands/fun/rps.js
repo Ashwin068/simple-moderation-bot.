@@ -52,7 +52,7 @@ exports.run = async (client, message, args) => {
         }
         message.channel.send(response);
     } else {
-        message.channel.send("You need to use `r!rps` <rock|paper|scissors>");
+        message.channel.send("You need to use `-rps` <rock|paper|scissors>");
     }
 }
 exports.conf = {
