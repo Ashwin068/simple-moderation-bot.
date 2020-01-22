@@ -4,7 +4,7 @@ exports.run = async (client, message, args, color) => { // eslint-disable-line n
 	var reminder = args.splice(1).join(' ');
 
 	if (!time) return message.reply('Can not remind you if I do not know when to do it...');
-	if (!reminder) return message.reply('Anda lupa pengingat/pesannya');
+	if (!reminder) return message.reply('Forgot your reminder/message');
 
 	// Ini tidak akan berfungsi jika bot di-restart atau dihentikan
 
@@ -23,13 +23,13 @@ exports.run = async (client, message, args, color) => { // eslint-disable-line n
 		var timeday = await time.replace(/d.*/, '');
 		timems = await timeday * 60 * 60 * 24 * 1000;
 	}	else {
-		return message.reply('Waktu harus dalam format \`<number>[s/m/h/d]\`');
+		return message.reply('Time must be in the format \`<number>[s/m/h/d]\`');
 	}
 
-	message.reply(`Aku akan mengingatkanmu dalam \`${time}\` tentang \`${reminder}\``);
+	message.reply(`I'll remind you in the \`${time}\` about \`${reminder}\``);
 
 	setTimeout(function () {
-		message.author.send(`Anda bertanya kepada saya \`${time}\` lalu untuk mengingatkan Anda tentang \`${reminder}\``);
+		message.author.send(`You asked me \`${time}\` Then to remind you of the \`${reminder}\``);
 	}, parseInt(timems));
 
 };
