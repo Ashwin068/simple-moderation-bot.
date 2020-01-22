@@ -13,7 +13,7 @@ const member = message.mentions.members.first() || message.guild.members.get(arg
 }
 
 exports.conf = {
-  aliases: ['avatar'],
+  aliases: ['av'],
   cooldown: '5'
 }
 
