@@ -4,13 +4,13 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args, color) => {
 
 	
-	if(!args[0]) return message.channel.send(`**Mohon masukkan beberapa teks**`);
+	if(!args[0]) return message.channel.send(`**Please enter some text**`);
 	
-  let postMsg = await message.channel.send('**Mohon tunggu sebentar...**');
+  let postMsg = await message.channel.send('**Please wait a minute...**');
   
 	let res = await urban(args.join(' ')).catch(e => {
 		
-		return message.channel.send('**Maaf, kata itu tidak ditemukan!**');
+		return message.channel.send('**Sorry, the word was not found😔**');
 	});
 
 	const embed = new Discord.RichEmbed()
