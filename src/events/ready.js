@@ -11,7 +11,7 @@ setInterval(randStatus, 60000);
   /*hourly cat present :v - youKnowOwO*/ /*ok then - Hazmi35*/
   client.setInterval(() => {
   	for(const guild of client.guilds.array()){
-	  	const channel = guild.channels.filter(x => x.name === 'hourly-cat-present').first();
+	  	const channel = guild.channels.filter(x => x.name === '『😺』cat-hourly-present').first();
 	  	if(!channel) continue;
 		client.commands.get('cat').getCat(channel, 'Hourly Cat present');
   	}
