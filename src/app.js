@@ -8,5 +8,5 @@ const client = new codDevClient({
 require('./handle/events')(client);
 require('./handle/module')(client);
 
-client.login("NjU3OTAwMDM3Njc4MDM5MDQw.XiTj3w.fkLf4B_iO_likc9tksTrYJyBdlI")
+client.login("NjQxMjk1NDkxMjMzMjE4NTg5.XmDCFg.b5YAHjJXBUYwM4UWyE2WHhAZ2Ss")
 
