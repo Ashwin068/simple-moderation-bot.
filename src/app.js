@@ -8,5 +8,5 @@ const client = new codDevClient({
 require('./handle/events')(client);
 require('./handle/module')(client);
 
-client.login("NjQxMjk1NDkxMjMzMjE4NTg5.XmDCFg.b5YAHjJXBUYwM4UWyE2WHhAZ2Ss")
+client.login("put here your token")
 
