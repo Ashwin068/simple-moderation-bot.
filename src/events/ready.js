@@ -1,7 +1,7 @@
 module.exports = client => {
   console.log(`${client.user.username} Ready to playing with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
   function randStatus() {
-    let status = [`with ${client.users.size} users`, `with Daynite World`];
+    let status = [`with ${client.users.size} users`, `with global bot`];
     let rstatus = Math.floor(Math.random() * status.length);
     client.user.setActivity(status[rstatus], { type: 'PLAYING' });
   };
